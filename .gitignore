@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# User cache, data & logs (Keeps personal login credentials out of git)
+userdata/
+cache/
+logs/
+
+# Temporary files & logs
+*.log
+*.zip
+
+# OS & IDE
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

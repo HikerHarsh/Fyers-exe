@@ -1,0 +1,48 @@
+{
+  "name": "fyers-desktop",
+  "version": "1.0.0",
+  "description": "Fyers Trading Desktop App - Fast & Custom UI",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "build-portable": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.fyers.desktop",
+    "productName": "Fyers Desktop",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Fyers Desktop"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/.cache",
+      "!*.md"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.0.0"
+  }
+}
