@@ -34,11 +34,6 @@ try {
   os.setPriority(os.constants.priority.PRIORITY_HIGH);
 } catch (e) {}
 
-// ─── Dedicated Paths ─────────────────────────────────────────────────────────
-app.setPath('userData', path.resolve('D:\\fyers-desktop\\userdata'));
-app.setPath('cache',    path.resolve('D:\\fyers-desktop\\cache'));
-app.setPath('logs',     path.resolve('D:\\fyers-desktop\\logs'));
-
 const FYERS_URL = 'https://fyers.in/web/markets/home';
 const APP_NAME  = 'Fyers Desktop (Ultra-Fast)';
 
@@ -106,8 +101,8 @@ function createWindow() {
       preload:                     path.resolve(__dirname, 'preload.js'),
       webSecurity:                 true,
       allowRunningInsecureContent: false,
-      backgroundThrottling:        false, // Critical: 0% throttling in background
-      spellcheck:                  false, // Saves CPU cycles
+      backgroundThrottling:        false,
+      spellcheck:                  false,
     },
   });
 
