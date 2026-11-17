@@ -1,7 +1,8 @@
 {
   "name": "fyers-desktop",
   "version": "1.0.0",
-  "description": "Fyers Trading Desktop App - Fast & Custom UI",
+  "description": "Fyers Trading Desktop App - Fast & Low-Latency",
+  "author": "HikerHarsh",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -36,9 +37,10 @@
       "shortcutName": "Fyers Desktop"
     },
     "files": [
-      "**/*",
-      "!node_modules/.cache",
-      "!*.md"
+      "main.js",
+      "preload.js",
+      "package.json",
+      "assets/**/*"
     ]
   },
   "devDependencies": {
